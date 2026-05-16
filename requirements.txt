@@ -28,3 +28,5 @@ docx2pdf>=0.1.8
 # EPUB → PDF conversion
 ebooklib>=0.18
 xhtml2pdf>=0.2.16
+# Security & Validation
+python-magic-bin>=0.4.14
