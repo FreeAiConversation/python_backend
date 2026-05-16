@@ -7,8 +7,17 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 # ── Security ──────────────────────────────────────────────────────────────────
+from security.headers import add_security_headers
+from security.limits import check_upload_limits
 from security.rate_limiter import limiter, HEAVY_LIMIT, MEDIUM_LIMIT, LIGHT_LIMIT
 from security.headers      import apply_security_headers
+
+# Initialize Flask App
+app = Flask(__name__)
+
+# Register Global Security Middleware
+app.before_request(check_upload_limits)
+app.after_request(add_security_headers)
 
 # ── Tool Blueprints ───────────────────────────────────────────────────────────
 from tools.image_optimizer   import bp as image_optimizer_bp
