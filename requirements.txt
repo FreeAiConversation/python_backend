@@ -1,0 +1,30 @@
+# FreeAiConversion — Python Backend Dependencies
+# Install: pip install -r requirements.txt
+
+# Core
+flask==3.0.3
+flask-cors==4.0.1
+waitress>=3.0.0
+flask-limiter>=3.7.0
+gunicorn>=21.0.0
+gevent>=24.0.0
+redis>=5.0.0
+
+# Image processing
+Pillow>=10.0.0
+
+# Code formatting
+jsbeautifier>=1.15.1
+sqlparse>=0.5.0
+
+# PDF processing
+pypdf>=4.0.0
+reportlab>=4.0.0
+
+# PDF ↔ Word conversion
+pdf2docx>=0.5.8
+docx2pdf>=0.1.8
+
+# EPUB → PDF conversion
+ebooklib>=0.18
+xhtml2pdf>=0.2.16
